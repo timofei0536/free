@@ -1,0 +1,17 @@
+.policy {
+    padding-top: 15.5rem;
+    padding-bottom: 10rem;
+
+    @media screen and (max-width:$large_tablet) {
+        padding-top: 10rem;
+        padding-bottom: 3rem;
+    }
+
+    &__content {
+        margin-top: 3rem;
+
+        @media screen and (max-width:$large_tablet) {
+            margin-top: 0;
+        }
+    }
+}

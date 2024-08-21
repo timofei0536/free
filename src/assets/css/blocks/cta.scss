@@ -1,0 +1,150 @@
+.cta {
+	margin: 20rem 0px;
+	position: relative;
+	z-index: 2;
+	@media screen and (max-width:$large_tablet) {
+		margin: 10rem 0px;
+	}
+
+
+	&__main-title {
+		text-align: center;
+		font-size: 10rem;
+		font-family: $primary-f2;
+		line-height: 110%;
+		letter-spacing: -0.05em;
+		margin-bottom: 10rem;
+    	@media screen and (max-width:$large_tablet) {
+    		font-size: 4rem;
+    		line-height: 100%;
+    		margin-bottom: 5rem;
+    	}
+
+	}
+
+	.center-wrap {
+		@media screen and (min-width:$large_tablet) {
+			max-width: 140rem;
+		}
+	}
+	&__wrap {
+		display: flex;
+		gap: 10rem;
+		align-items: center;
+		@media screen and (max-width:$large_tablet) {
+			flex-direction: column;
+			gap: 5rem;
+		}
+
+	}
+
+
+
+
+	&__tabs {
+		border-radius: 10rem;
+		border: 1px solid rgba(white,0.15);
+		display: flex;
+		font-size: 2.2rem;
+		letter-spacing: -0.03em;
+		font-family: $primary-f2;
+		line-height: 6rem;
+		@media screen and (max-width:$large_tablet) {
+			font-size: 1.5rem;
+			letter-spacing: -0.03em;
+			line-height: 5rem;
+		}
+
+	}
+
+	&__tab {
+		padding: 0px 2rem;
+		border: 1px solid transparent;
+		transition: all 0.5s;
+		position: relative;
+		@media screen and (max-width:$large_tablet) {
+			padding: 0px 0.7rem;
+			white-space: nowrap;
+		}
+
+
+
+/*			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				width: 0.8rem;
+				height: 0.8rem;
+				background: $primary;
+				box-shadow: 0px 0px 14px 1px $primary;
+				border-radius: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				left: 2rem;
+				opacity: 0;
+				transition: opacity 0.5s;
+				@media screen and (max-width:$large_tablet) {
+					left: 0.75rem;
+					width: 0.6rem;
+					height: 0.6rem;
+				}
+
+			}*/
+
+
+		&.toogles__item-title--active {
+			border-color: $primary;
+			border-radius: 10rem;
+			background: $primary;
+			
+			/*padding-left: 4rem;*/
+			@media screen and (max-width:$large_tablet) {
+				/*padding-left: 1.5rem;*/
+			}
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__title {
+		font-size: 8rem;
+		line-height: 1;
+		font-family: $primary-f2;
+		margin: 3rem 0px;
+		
+		@media screen and (max-width:$large_tablet) {
+			font-size: 3rem;
+			margin-bottom: 2rem;
+		}
+
+
+		[data-toogles='2'] & {
+			@media screen and (min-width:$large_tablet) {
+				font-size: 7.25rem;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 2.5rem;
+		line-height: 140%;
+		color: $color--gray;
+		@media screen and (max-width:$large_tablet) {
+			font-size: 1.6rem;
+		}
+
+	}
+
+	.form {
+		max-width: 48rem;
+		width: 100%;
+	}
+}

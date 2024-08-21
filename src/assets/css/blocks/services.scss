@@ -1,0 +1,282 @@
+.services {
+	margin-top: 40rem;
+	margin-bottom: 20rem;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+
+        @media screen and (max-width:$large_tablet) {
+        	margin: 10rem 0px;
+        }
+
+
+	&__title {
+		font-size: 5rem;
+		font-family: $primary-f2;
+		line-height: 1;
+		margin-bottom: 3rem;
+
+        @media screen and (max-width:$large_tablet) {
+        	font-size: 4.5rem;
+        	white-space: nowrap;
+        }
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+        @media screen and (max-width:$large_tablet) {
+        	flex-direction: column;
+        }
+
+	}
+
+	&__left {
+		width: 50%;
+        @media screen and (max-width:$large_tablet) {
+        	width: 100%;
+        	margin-bottom: 5rem;
+        }
+
+	}
+
+	&__right {
+		width: 50%;
+        @media screen and (max-width:$large_tablet) {
+        	width: 100%;
+        }
+	}
+
+	&__text {
+		line-height: 155%;
+		font-size: 3rem;
+		color: $color--white;
+		@media screen and (max-width:$large_tablet) {
+		      font-size: 2rem;
+        }
+		span {
+			display: inline-block;
+			margin-right: 1rem;
+		}
+	}
+
+
+	&__list {
+		position: relative;
+		cursor: initial !important;
+	}
+
+	&__images {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__image, img {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__image {
+		transition: all 0.5s ease-out;
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+		&--active {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+	}
+
+
+
+	&__item {
+		padding: 3rem 0px;
+		display: flex;
+		align-items: center;
+		border-top: 1px solid rgba(white,0.1);
+
+		position: relative;
+		transition: color 0.5s;
+		width: 100%;
+
+		@media screen and (max-width:$large_tablet) {
+			padding: 2rem 0px;
+			justify-content: space-between;
+		}
+
+		&:hover, &.toogles__item-title--active {
+			/*color: black !important;*/
+			&::before {
+				opacity: 1;
+				height: 100%;
+			}
+			.services__item-arrow {
+				svg * {
+					/*fill: black !important;*/
+				}
+			}
+
+			.services__item-numb {
+				/*border-color: rgba(black,0.15);*/
+				/*color: black;*/
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: calc( 100% + 6rem);
+			left: -3rem;
+			bottom: 0px;
+			height: 0px;
+			background: $primary;
+			z-index: -1;
+			opacity: 0;
+			transition: all 0.5s;
+		}
+		
+		&[data-toogles='4'] {
+			border-bottom: 1px solid rgba(white,0.1);
+		}
+
+		&-title {
+			font-size: 4rem;
+			font-family: $primary-f2;
+			text-transform: capitalize;
+			padding-left: 2rem;
+			font-weight: 400;
+			margin-right: 2rem;
+			@media screen and (max-width:$large_tablet) {
+				font-size: 2rem;
+				padding-left: 1rem;
+				text-align: center;
+				margin-right: 1rem;
+			}
+
+		}
+
+		&-numb {
+			font-size: 1.8rem;
+			border: 1px solid rgba(white,0.1);
+			border-radius: 100px;
+			padding: 0.3rem 1rem;
+			transition: all 0.5s;
+			@media screen and (max-width:$large_tablet) {
+				font-size: 1.4rem;
+				padding: 0.3rem 0.8rem;
+			}
+
+		}
+
+		&-arrow {
+			transform: rotate(90deg);
+			margin-left: auto;
+			svg {
+				width: 2.5rem !important;
+				height: auto !important;
+				@media screen and (max-width:$large_tablet) {
+					width: 1.8rem !important;
+				}
+
+				* {
+					fill: $white;
+					transition: all 0.5s;
+				}
+			}
+		}
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			padding: 4rem 0px;
+
+
+			@media screen and (max-width:$large_tablet) {
+				padding: 3rem 0px;
+				flex-direction: column;
+			}
+
+
+			&-left {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 3rem;
+				flex-grow: 1;
+				flex-shrink: 0;
+				flex-basis: 0;
+				@media screen and (max-width:$large_tablet) {
+					gap: 2rem;
+					width: 100%;
+				}
+			}
+
+			&-text {
+				font-size: 2rem;
+				line-height: 140%;
+				@media screen and (max-width:$large_tablet) {
+					font-size: 1.6rem;
+				}
+
+			}
+
+
+			&-title {
+				font-size: 2.8rem;
+				font-weight: 500;
+				@media screen and (max-width:$large_tablet) {
+					font-size: 2.4rem;
+				}
+			}
+
+			&-stack {
+				gap: 0.5rem;
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 2rem;
+				span {
+				font-size: 1.8rem;
+				border: 1px solid white;
+				letter-spacing: -0.03em;
+				font-family: $primary-f2;
+				border-radius: 50px;
+				padding: 0px 1rem;
+				line-height: 150%;
+				font-weight: 00;
+				@media screen and (max-width:$large_tablet) {
+					font-size: 1.4rem;
+				}
+
+				}
+			}
+
+		}
+
+
+			&-btns {
+				display: flex;
+				margin-top: 3rem;
+				gap: 1.5rem;
+
+				@media screen and (max-width:$large_tablet) {
+					flex-direction: column;
+
+					.btn__texts {
+						margin: 0px auto;
+					}
+				}
+
+
+			}
+
+
+	}
+
+}

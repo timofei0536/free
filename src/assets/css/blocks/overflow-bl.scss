@@ -1,0 +1,30 @@
+.overflow-bl {
+	max-height: 12rem;
+	overflow-Y: auto;
+
+	.scroll-content {
+		min-height: auto !important;
+	}
+
+	.scrollbar-thumb,
+	.scrollbar-track-y {
+		width: 4px !important;
+	}
+
+	scrollbar-width: thin;
+	scrollbar-color: rgba(#655CED, .5) transparent;
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba(#655CED, .5) !important;
+		border-radius: 10rem;
+	}
+
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 10rem;
+		background: color;
+	}
+}

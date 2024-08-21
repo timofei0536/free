@@ -1,0 +1,61 @@
+mixin pain(params)
+	.section.pain(class=params.class).cursor-white
+		.pain__bg
+		.center-wrap
+			.pain__wrap
+				.pain__number
+					span.letter-dollar
+						.pain__number-shadow
+						| $
+					span.letter-two
+						.pain__number-shadow
+						| 2
+					span
+						.pain__number-shadow
+						| 0
+					span
+						.pain__number-shadow
+						| 0
+					span
+						.pain__number-shadow
+						| 0
+					span
+						.pain__number-shadow
+						| 0
+				.pain__title
+					.anim-line-wrap
+						.anim-line Designers
+					.anim-line-wrap.anim-line-wrap--color
+						.anim-line Lose Annually
+					.anim-line-wrap
+						.anim-line on Wordpress
+					.anim-line-wrap
+						.anim-line and Webflow 
+					.anim-line-wrap
+						.anim-line Partnership
+					//- .anim-line-wrap
+					//- 	.anim-line
+					//- 		svg(width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+					//- 			path(d="M1.39876 2.49218L10.3424 2.53456L0 12.6226L1.48353 14.0637L11.9107 3.89094L11.9531 12.7074L14.03 10.7152L13.9876 0.5H3.47571L1.39876 2.49218Z" fill="#0D0F1A")
+			if !params.homepage
+				.pain__list
+					.pain__list-title Just APPROX Math:
+					.pain__item
+						div
+							.pain__item-number 01
+							.pain__item-text Designer working<br> 1920 hours per year<br class='desktop--hide'> ( 12*160h)
+					.pain__item
+						div
+							.pain__item-number 02
+							.pain__item-text Usually Same hours<br> need to implement<br class='desktop--hide'>  this Design
+					.pain__item.pain__item--red
+						div
+							.pain__item-number 03
+							.pain__item-text
+								| Overpaying just $10<br> hourly could cut <span><br class='desktop--hide'> $19,200<br class='mobile--hide'>   from Your<br class='desktop--hide'> Budget Every Year.</span>
+					.pain__item.pain__item--red
+						div
+							.pain__item-number 04
+							.pain__item-text Scope Overestimation<br>25% could cost  your Agency <br class='mobile--hide'><span>$15,000 annually as well.</span>
+		if params.homepage
+			include ../includes/ticker

@@ -1,0 +1,49 @@
+.socials {
+    display: flex;
+    gap: 2rem;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        border: 1px solid rgba(white,0.1);
+        border-radius: 50%;
+        height: 8.8rem;
+        width: 8.8rem;
+        @media screen and (max-width:$large_tablet) {
+            width: 7rem;
+            height: 7rem;
+        }
+
+        transition: 0.5s;
+
+
+        svg {
+            width: 3.8rem;
+            @media screen and (max-width:$large_tablet) {
+                width: 2.7rem;
+            }
+
+
+            * {
+                fill: #fff;
+                transition: all 0.5s;
+            }
+        }
+
+
+        &--faceb {
+            svg {
+                width: 4.1rem;
+            }
+        }
+
+        .magnet-wrap:hover &{
+            background: white;
+            svg * {
+                fill: black;
+            }
+        }
+    }
+}

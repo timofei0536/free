@@ -1,0 +1,129 @@
+.form {
+	border-radius: 2rem;
+	background: white;
+	color: black;
+	padding: 5rem;
+    padding-bottom: 8.5rem;
+	width: 100%;
+	max-width: 48rem;
+	display: flex;
+	flex-direction: column;
+    position: relative;
+
+        @media screen and (max-width:$large_tablet) {
+        	padding: 3rem 2rem;
+            padding-bottom: 6.5rem;
+        }
+
+	&__title {
+		font-size: 3.9rem;
+        letter-spacing: -0.02em;
+		font-weight: 500;
+		line-height: 100%;
+        margin-bottom: 5rem;
+        @media screen and (max-width:$large_tablet) {
+        	font-size: 3rem;
+        }
+
+	}
+
+	&__tabs {
+		margin: 5rem 0px;
+		display: flex;
+		border: 1px solid blue;
+		border-radius: 100px;
+		overflow: hidden;
+                font-family: $primary-f2;
+                font-weight: 500;
+                letter-spacing: 0em;
+        @media screen and (max-width:$large_tablet) {
+        	margin: 3rem 0px;
+        }
+
+	}
+
+	&__inputs {
+		display: flex;
+		flex-direction: column;
+		gap: 4.5rem;
+        @media screen and (max-width:$large_tablet) {
+        	gap: 3rem;
+        }
+
+	}
+    &__input {
+        border: none !important;
+        font-size: 2rem;
+        color: black;
+        background: none;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+
+        @media screen and (max-width:$large_tablet) {
+        	font-size: 1.6rem;
+        }
+
+
+        &-wrap {
+        	border-bottom: 1px solid rgba(black,0.2);
+        	padding-bottom: 1.5rem;
+        	@media screen and (max-width:$large_tablet) {
+        		padding-bottom: 1rem;
+        	}
+
+        }
+
+        &::placeholder {
+            color: black;
+        }
+
+        &::-webkit-input-placeholder {
+            color: black;
+        }
+
+        &:-moz-placeholder {
+            color: black;
+        }
+
+        &::-moz-placeholder {
+            color: black;
+        }
+
+        &:-ms-input-placeholder {
+            color: black;
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        background: rgba(blue,0.5);
+        color: white;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        border-radius: 0rem 0rem 2rem 2rem;
+        padding: 1.5rem 5rem;
+        @media screen and (max-width:$large_tablet) {
+            font-size: 1.3rem;
+            padding: 1rem 2rem;
+        }
+        
+
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 9rem;
+        right: calc( 100% + 2rem );
+        * {
+            fill: rgba(white,0.2);
+        }
+
+        @media screen and (max-width:$large_tablet) {
+            display: none;
+        }
+
+    }
+
+}

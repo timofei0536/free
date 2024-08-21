@@ -1,0 +1,30 @@
+.preloader
+	div.preloader__content
+		div.preloader__title
+			div.preloader__title-line.preloader__title-line--one(data-at-name="atTitle" data-at-style='lines')
+				span.anim-line-wrap
+					span.anim-line
+						.word 80%
+						.word of
+						.word designers 
+				span.anim-line-wrap
+					span.anim-line
+						.word.color don’t
+						.word.color have 
+						.word.color reliable
+						.word.color developers
+				span.anim-line-wrap
+					span.anim-line
+						.word Other
+						.word.color.line1 overpay
+						.word.color.line1 for
+						.word.color.line1 development
+
+script.
+	let preloader = document.querySelector('.preloader');
+
+	if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("alina") == -1) || !(location.href.indexOf('localhost') == -1)) {
+		preloader.remove();
+	}
+
+	// document.cookie = "cookie=hide;max-age=86400";
