@@ -63,4 +63,7 @@ import './assets/js/animation/change';
 // import './assets/js/video-preload';
 
 
+ document.querySelector('video').playbackRate = 0.5;
+
+
 

@@ -64,6 +64,7 @@
 		line-height: 0.75;
 		letter-spacing: -0.05em;
 		color: #151515;
+		z-index: -1;
     	@media screen and (max-width:$large_tablet) {
     		font-size: 7.55rem;
     	}
@@ -93,21 +94,15 @@
 				left: 3%;
 				width: 98%;
 				height: 20rem;
+				z-index: -1;
+				
 
 				.pain--big & {
 					height: 35rem;
 				}
 				transform-origin: top;
-    			@media screen and (max-width:$large_tablet) {
-    				height: 20rem;
-    			}
 
-				
 
-				@media screen and (max-width:$large_tablet) {
-					background: linear-gradient(360deg, transparent 00%, rgba(black,0.3) 100%);
-				}
-				z-index: -1;
 
 				&::before {
 					content: "";
@@ -117,6 +112,14 @@
 					height: 100%;
 					top: 0px;
 					background: rgba(black,0.1);
+
+    				@media screen and (max-width:$large_tablet) {
+
+						.pain--big & {
+							background: rgba(black,0.05);
+						}
+					}
+
 					clip-path: polygon(0.15em 0.2em, 82.5% 0.2em, 82.5% 0, 100% 0, 100% 100%, 0 100%, 0 0, 0.15em 0);
 				}
 			}
@@ -132,9 +135,6 @@
 					height: calc( 100% - 0.15em );
 				}
 
-    			@media screen and (max-width:$large_tablet) {
-					height: calc( 20rem - 0.15em );
-    			}
 			}
 
 			&.letter-two .pain__number-shadow {
@@ -147,9 +147,6 @@
 					clip-path: none;
 				}
 
-    			@media screen and (max-width:$large_tablet) {
-					height: calc( 20rem - 0.2em );
-    			}
 			}
 		}
 	}

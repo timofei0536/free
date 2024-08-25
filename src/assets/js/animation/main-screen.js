@@ -61,32 +61,6 @@ if ( document.querySelector('.main-screen')) {
       x: () => -title.offsetWidth + document.querySelector('.main-screen .center-wrap').offsetWidth,
     },0);
 
-    let img1 = document.querySelector('.main-screen__photo--1');
-    let img2 = document.querySelector('.main-screen__photo--2');
-    let img3 = document.querySelector('.main-screen__photo--3');
-
-    tl.fromTo(img1,{
-      y: 0,
-    },{
-      y: '-20%',
-    },0);
-
-
-    tl.fromTo(img2,{
-      y: 0,
-    },{
-      y: '-40%',
-    },0);
-
-
-
-    tl.fromTo(img3,{
-      y: 0,
-    },{
-      y: '-100%',
-    },0);
-
-
 
 }
 

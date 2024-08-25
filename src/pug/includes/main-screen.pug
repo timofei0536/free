@@ -1,6 +1,7 @@
 section.main-screen#home.at-block
-	video(muted autoplay loop).main-screen__video
-		source(src='assets/images/video/video.mp4' type='video/mp4')
+	.main-screen__video-wrap
+		video(muted autoplay loop).main-screen__video
+			source(src='assets/images/video/loop.mp4' type='video/mp4')
 
 	.main-screen__location 
 		.main-screen__location-text Europe Based<br> Born in Ukraine
@@ -14,18 +15,6 @@ section.main-screen#home.at-block
 						.circle-hor-middle
 
 	.center-wrap
-		.main-screen__photo.main-screen__photo--1
-			div
-				picture
-					img(src='assets/images/png/alina1.png')
-		.main-screen__photo.main-screen__photo--2
-			div
-				picture
-					img(src='assets/images/png/alina2.png')
-		.main-screen__photo.main-screen__photo--3
-			div
-				picture
-					img(src='assets/images/png/alina3.png')
 		h1.main-screen__title.at-element(data-at-name='atTitle' data-at-custom='true') 
 			.letter F
 			.letter r

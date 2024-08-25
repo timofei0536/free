@@ -20,10 +20,10 @@
 			line-height: 1.2;
 			color: $color--gray;
 			font-family: $primary-f2;
+			letter-spacing: -0.05em;
 
 			@media screen and (max-width:$large_tablet) {
-				font-size: 2.75rem;
-				letter-spacing: -0.02em;
+				font-size: 2.3rem;
 			}
 
 
