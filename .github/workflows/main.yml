@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export REPOPATH=/home/atstudio/repositories/atmosphere/dist/*
+    - export SITEPATH=/home/atstudio/atmosphere.atstudio1.com
+    - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH
