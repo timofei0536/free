@@ -2,31 +2,46 @@ export const backgroundsGsap = () => {
 
   let delay = window.PRELOADER_DELAY  + 2000;
 
-  setTimeout(function(){
 
 
+  if (document.querySelector('.pain--big') && document.querySelector('.cta')) {
 
-  if (document.querySelector('.mission') && document.querySelector('.paint')) {
-
-    let y = '-10rem';
-    
-    if (!window.its_desktop){
-      y = '-5rem';
-    }
-
-
-    gsap.to(document.querySelector(".mission__bg"), {
+    gsap.to(".cta__bg", {
 
       scrollTrigger: {
-        trigger: '.mission',
+        trigger: '.cta',
         start: "top bottom",
         end: "center center",
         scrub: 2,
       },
-      y: y,
+      transform: 'scaleY(0)',
+
+    });
+  } else {
+    if( document.querySelector('.cta__bg') ){
+      document.querySelector('.cta__bg').remove();
+    }
+  }
+
+  
+  setTimeout(function(){
+
+  if (document.querySelector('.mission') && document.querySelector('.portfolio__bg')) {
+
+    gsap.to(".portfolio__bg", {
+
+      scrollTrigger: {
+        trigger: '.portfolio__intro',
+        start: "top bottom",
+        end: "center center",
+        scrub: 2,
+      },
+      transform: 'scaleY(0)',
 
     });
   }
+
+
 
 
 
@@ -43,8 +58,6 @@ export const backgroundsGsap = () => {
       },
 
   });
-
-
 
     const animTl = gsap.timeline({
       scrollTrigger: {
@@ -111,36 +124,6 @@ export const backgroundsGsap = () => {
 
 
 if (window.its_desktop) {
-
-
-
-  // gsap.to(document.querySelectorAll(".uniq__wrap"), {
-
-  //   scrollTrigger: {
-  //     trigger: '.uniq',
-  //     start: "bottom center+=200px",
-  //     end: "+=1000px",
-  //     scrub: 1.5,
-  //     pin: '.uniq',
-  //     pinSpacing: false,
-  //   },
-
-  // });
-
-
-  // gsap.to(document.querySelectorAll(".uniq__wrap"), {
-
-  //   scrollTrigger: {
-  //     trigger: '.uniq',
-  //     start: "bottom center+=200px",
-  //     end: "+=200px",
-  //     scrub: 1.5,
-  //   },
-
-  //   opacity: 0,
-  // });
-
-
 
   // processes
 

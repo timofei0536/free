@@ -1,9 +1,15 @@
 .footer {
-        
+    border-top: 0.5px solid rgba(white,0.2);
+    z-index: 2;
+
+    &--home {
+    	background: black;
+    }
+	
 	&__wrap {
 		display: flex;
 		justify-content: space-between;
-		border-top: 1px solid rgba(white,0.1);
+		
 		padding: 5rem 0px;
 		align-items: center;
 		@media screen and (max-width:$large_tablet) {

@@ -1,12 +1,11 @@
 if (document.querySelector('header')) {
   let header = document.querySelector('.header');
 
-
-
-
   let delay = window.PRELOADER_DELAY / 1000;
 
 
+
+  
 let mainScreenItems = '.header__logo, .header__nav-item, .header__btn, .main-screen__location';
 
 if (!window.its_desktop) {
@@ -28,12 +27,13 @@ if (!window.its_desktop) {
     },
     onComplete: function(){
 
-      document.querySelector('.main-screen').classList.add('main-screen--animated');
+      if( document.querySelector('.main-screen') ){
+        document.querySelector('.main-screen').classList.add('main-screen--animated');
+      }
       document.querySelector('.header').classList.add('header--animated');
     },
     delay: delay,
   })
-
 
 
 

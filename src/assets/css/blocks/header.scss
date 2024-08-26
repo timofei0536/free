@@ -8,7 +8,6 @@
 	z-index: 2;
 	animation: header-opacity 1s;
 	animation-fill-mode: forwards;
-	mix-blend-mode: difference;
 
         
 	&:hover {
@@ -37,6 +36,7 @@
 		align-items: center;
 		color: $primary-c;
 		padding-top: 1rem;
+		mix-blend-mode: difference;
 
 		.header {
 			&__visibility {
@@ -58,6 +58,11 @@
 
 			&__nav {
 				color: #fff;
+			}
+
+			&__btn .btn {
+				border-color: white;
+				color: white;
 			}
 
 		}
