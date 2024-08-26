@@ -4,27 +4,19 @@
 			div.preloader__title-line.preloader__title-line--one(data-at-name="atTitle" data-at-style='lines')
 				span.anim-line-wrap
 					span.anim-line
-						span.word 80%
-						span.word of
-						span.word Designers 
+						| 80% of Designers 
+				span.anim-line-wrap
+					span.anim-line.color don’t have reliable Developers
 				span.anim-line-wrap
 					span.anim-line
-						span.word.color don’t
-						span.word.color have 
-						span.word.color reliable
-						span.word.color Developers
-				span.anim-line-wrap
-					span.anim-line
-						span.word Other
-						span.word.color.line1 Overpay
-						span.word.color.line1 for
-						span.word.color.line1 development
+						span Other 
+						span.color Overpay for development
 
 script.
 	let preloader = document.querySelector('.preloader');
 
 	if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("alina") == -1) || !(location.href.indexOf('localhost') == -1)) {
-		preloader.remove();
+		// preloader.remove();
 	}
 
 	// document.cookie = "cookie=hide;max-age=86400";
