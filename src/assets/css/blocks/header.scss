@@ -1,13 +1,20 @@
 .header {
 	padding-top: 3.5rem;
-	position: absolute;
 	top: 0px;
 	left: 0;
 	width: 100%;
-	opacity: 0;
 	z-index: 2;
-	animation: header-opacity 1s;
-	animation-fill-mode: forwards;
+	color: white;
+	position: fixed;
+	z-index: 98;
+	mix-blend-mode: difference;
+	transition:  padding-top 1s;
+	@media screen and (min-width:$large_tablet) {
+
+		&--home:not(.header--fixed) {
+			mix-blend-mode: initial;
+		}
+	}
 
         
 	&:hover {
@@ -18,32 +25,13 @@
 		padding: 1rem 0;
 	}
 
-	&--hide {
-		overflow: initial;
-		transform: translateY(-100%);
-	}
 
 	&--fixed {
-		transition: background 0.5s;
-		overflow: hidden;
-		position: fixed;
-		opacity: 1;
-		width: 100%;
-		top: 0px;
-		left: 0px;
-		z-index: 98;
-		display: flex;
-		align-items: center;
-		color: $primary-c;
 		padding-top: 1rem;
 		mix-blend-mode: difference;
+		overflow: hidden;
 
 		.header {
-			&__visibility {
-				top: 100%;
-				opacity: 1;
-				visibility: visible;
-			}
 
 			&__logo {
 				@media screen and (min-width:$large_tablet) {
@@ -56,23 +44,13 @@
 				border-radius: 50px;
 			}
 
-			&__nav {
-				color: #fff;
-			}
 
 			&__btn .btn {
 				border-color: white;
-				color: white;
 			}
 
 		}
 
-		&.header--height1 {
-			.header__visibility {
-				opacity: 0;
-				visibility: hidden;
-			}
-		}
 	}
 
 	&--black {
@@ -88,59 +66,6 @@
 		}
 	}
 
-	&--height1 {
-		// transform: translate(0px, -100%);
-		animation: header-height 0.5s !important;
-		animation-fill-mode: forwards !important;
-	}
-
-	&--height0 {
-		// transform: translate(0px, 0%);
-		animation: header-height0 0.5s !important;
-		animation-fill-mode: forwards !important;
-	}
-
-
-	@keyframes header-opacity {
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes header-height {
-		0% {
-			transform: translate(0px, -100%);
-		}
-
-		100% {
-			transform: translate(0px, 0%);
-		}
-	}
-
-	@keyframes header-height0 {
-		0% {
-			transform: translate(0px, 0%);
-		}
-
-		100% {
-			transform: translate(0px, -100%);
-		}
-	}
-
-	&__visibility {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 80%;
-		opacity: 0;
-		visibility: hidden;
-
-		@media screen and (max-width:$large_tablet) {
-			display: none;
-		}
-	}
-
 	&__wrap {
 		display: flex;
 		align-items: center;
@@ -151,12 +76,12 @@
 
 	&__logo {
 		font-size: 20rem;
+		transition:  font-size 1s;
 		letter-spacing: -0.03em;
 		color: $white2;
 		font-weight: 500;
 		font-family: $primary-f2;
 		line-height: 0.7;
-
 
 		@media screen and (min-width:$large_tablet) {
 			.header:not(.header--home) &{
@@ -227,7 +152,6 @@
 		border: 1px solid white;
 		border-radius: 10rem;
 		transition: all 0.5s;
-		color: #fff;
 		@media screen and (min-width:$large_tablet) {
 			display: none;
 		}

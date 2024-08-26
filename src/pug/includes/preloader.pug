@@ -15,8 +15,8 @@
 script.
 	let preloader = document.querySelector('.preloader');
 
-	if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("alina") == -1) || !(location.href.indexOf('localhost') == -1)) {
-		// preloader.remove();
+	if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("frontend") == -1) || !(location.href.indexOf('localhost') == -1)) {
+		preloader.remove();
 	}
 
 	// document.cookie = "cookie=hide;max-age=86400";
