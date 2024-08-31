@@ -43,14 +43,19 @@ let lastScrollTop = 0;
 scrollbar.addListener(function(){
   let scrollTop = scrollbar.scrollTop;
 
+  let startFixed = 200;
+
+  if ( window.tlLength ){
+    startFixed = window.tlLength;
+  }
   
-    if ( scrollTop > 200 ) {
+    if ( scrollTop > startFixed ) {
       header.classList.add('header--fixed');
     } else {
       header.classList.remove('header--fixed');
     }
     
-  if (scrollTop > lastScrollTop) {
+  if (scrollTop > lastScrollTop & scrollTop > startFixed ) {
 
 
     gsap.to(header, {

@@ -5,6 +5,7 @@ export const mainScreen = () => {
 
 if ( document.querySelector('.main-screen')) {
 
+window.tlLength = 500;
 
     let video = document.querySelector('.main-screen__video');
 
@@ -12,16 +13,9 @@ if ( document.querySelector('.main-screen')) {
     scrollTrigger: {
           trigger: '.main-screen',
           start: "top top", // Старт пина когда элемент в верху вьюпорта
-          end: '+=500px',
+          end: '+='+window.tlLength,
           scrub: 1.5,
           pin: true,
-        //    onUpdate: (self) => {
-        //       var scrollPercent = self.progress;  // Прогресс прокрутки от 0 до 1
-        //       console.log(scrollPercent);
-        //       var videoDuration = video.duration; // Продолжительность видео в секундах
-        //       video.currentTime = scrollPercent * videoDuration;
-        // }
-
     }
   });
 
@@ -30,7 +24,7 @@ if ( document.querySelector('.main-screen')) {
     scrollTrigger: {
           trigger: '.numbers',
           start: "top bottom", // Старт пина когда элемент в верху вьюпорта
-          end: '+=500px',
+          end: '+='+150,
           scrub: 1.5,
           pin: '.main-screen',
           pinSpacing: false,
@@ -38,14 +32,12 @@ if ( document.querySelector('.main-screen')) {
   });
 
 
-    tl2.fromTo(document.querySelector('.main-screen .center-wrap'),{
+    tl2.fromTo('.main-screen .center-wrap, .main-screen__location',{
       opacity: 1,
       filter: 'blur(0px)',
-      scale: 1,
     },{
       opacity: 0,
       filter: 'blur(15px)',
-      scale: 1.2,
     },0);
 
 
