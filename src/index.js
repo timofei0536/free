@@ -1,14 +1,12 @@
 import './assets/css/normalize.scss';
 import './assets/css/main.scss';
 import './assets/js/consts';
-// import './assets/js/animation/page-trans';
 import './assets/css/animation/preloader.scss'
 import './assets/css/animation/main.scss'
 import './assets/css/animation/cursor.scss'
 
 
 //BLOCKS 
-// import './assets/css/animation/page-trans.scss'
 import './assets/css/blocks/pain.scss'
 import './assets/css/blocks/ticker.scss'
 import './assets/css/animation/parallax-img.scss'
@@ -33,9 +31,6 @@ import './assets/css/blocks/footer.scss';
 import './assets/css/blocks/main-screen.scss';
 import './assets/css/blocks/select.scss';
 import './assets/css/blocks/overflow-bl.scss';
-import './assets/css/blocks/video-preload.scss';
-
-
 
 // JS
 import './assets/js/animation/scrollbarFix';
@@ -47,20 +42,14 @@ import './assets/js/animation/parallax-magner';
 import './assets/js/scrollBody';
 import './assets/js/heightVh';
 import './assets/js/overflow-bl';
-import './assets/js/footer';
-import './assets/js/select';
 import './assets/js/toogles';
-import './assets/js/inputs';
 import './assets/js/popup';
-import './assets/js/inputs-mask';
 import './assets/js/mobile-menu';
 import './assets/js/anchors';
 import './assets/js/theme-color';
 import './assets/js/iphoneScroll';
 import './assets/js/zoom-body';
 import './assets/js/animation/change';
-
-// import './assets/js/video-preload';
 
 
  // document.querySelector('video').playbackRate = 0.5;

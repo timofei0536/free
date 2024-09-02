@@ -8,7 +8,7 @@ html(lang="ru")
     meta(charset='utf-8')
     meta(name='description' content='Text')
     title #{title}
-    meta(name='theme-color' content='#cccccc')
+    meta(name='theme-color' content='#302f38')
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -31,71 +31,6 @@ html(lang="ru")
   body(id=pageClass)
     include ../includes/preloader
     .cursor
-      .cursor__products
-              .products__images
-                .products__image.products__image--active(data-image='0')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product1x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product1x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product1x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product1x2.png')
-                    img(src='assets/images/products/product1x1.png' alt="Responsive image" srcset="assets/images/products/product1x1.png 1x, assets/images/products/product1x2.png 2x")
-                .products__image.products__image--active(data-image='1')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product1x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product1x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product1x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product1x2.png')
-                    img(src='assets/images/products/product1x1.png' alt="Responsive image" srcset="assets/images/products/product1x1.png 1x, assets/images/products/product1x2.png 2x")
-                .products__image(data-image='2')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product2x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product2x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product2x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product2x2.png')
-                    img(src='assets/images/products/product2x1.png' alt="Responsive image" srcset="assets/images/products/product2x1.png 1x, assets/images/products/product2x2.png 2x")
-                .products__image(data-image='3')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product3x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product3x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product3x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product3x2.png')
-                    img(src='assets/images/products/product3x1.png' alt="Responsive image" srcset="assets/images/products/product3x1.png 1x, assets/images/products/product3x2.png 2x")
-                .products__image(data-image='4')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product4x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product4x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product4x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product4x2.png')
-                    img(src='assets/images/products/product4x1.png' alt="Responsive image" srcset="assets/images/products/product4x1.png 1x, assets/images/products/product4x2.png 2x")
-                .products__image(data-image='5')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product5x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product5x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product5x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product5x2.png')
-                    img(src='assets/images/products/product5x1.png' alt="Responsive image" srcset="assets/images/products/product5x1.png 1x, assets/images/products/product5x2.png 2x")
-                .products__image(data-image='6')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product6x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product6x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product6x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product6x2.png')
-                    img(src='assets/images/products/product6x1.png' alt="Responsive image" srcset="assets/images/products/product6x1.png 1x, assets/images/products/product6x2.png 2x")
-                .products__image(data-image='7')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product7x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product7x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product7x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product7x2.png')
-                    img(src='assets/images/products/product7x1.png' alt="Responsive image" srcset="assets/images/products/product7x1.png 1x, assets/images/products/product7x2.png 2x")
-                .products__image(data-image='8')
-                  picture
-                    source(type="image/webp" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product8x1.webp')
-                    source(type="image/webp" media="(min-resolution: 2dppx)" srcset='assets/images/products/product8x2.webp')
-                    source(type="image/png" media="(max-resolution: 1.99dppx)" srcset='assets/images/products/product8x1.png')
-                    source(type="image/png" media="(min-resolution: 2dppx)" srcset='assets/images/products/product8x2.png')
-                    img(src='assets/images/products/product8x1.png' alt="Responsive image" srcset="assets/images/products/product8x1.png 1x, assets/images/products/product8x2.png 2x")
       .cursor__video Play
       .cursor__show
         p Show more
@@ -112,6 +47,5 @@ html(lang="ru")
     include ../includes/popup
     block script
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-      script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js')

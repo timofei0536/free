@@ -96,10 +96,9 @@ export const backgroundsGsap = () => {
     },0);
 
     animTl.fromTo(".pain__number span",{
-      x: "-50%",
-      scale: 1,
+      opacity: 0,
     }, {
-      x: "0%",
+      opacity: 1,
       stagger: {
         each: 0.05,
       }

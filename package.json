@@ -45,8 +45,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "gifsicle": "^5.2.0",
-    "gsap-plugin": "^5.0.8",
-    "inputmasks": "^5.0.8"
+    "gifsicle": "^5.2.0"
   }
 }
