@@ -32,7 +32,7 @@ window.tlLength = 500;
   });
 
 
-    tl2.fromTo('.main-screen .center-wrap, .main-screen__location',{
+    tl2.fromTo('.main-screen .center-wrap, .main-screen__location-wrap',{
       opacity: 1,
       filter: 'blur(0px)',
     },{

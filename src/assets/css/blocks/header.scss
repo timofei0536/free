@@ -8,7 +8,14 @@
 	position: fixed;
 	z-index: 98;
 	mix-blend-mode: difference;
-	transition:  padding-top 1s;
+
+	&--animated{
+		transition:  padding-top 1s;
+		.header__logo {
+			transition:  font-size 1s;
+		}
+	}
+	
 	@media screen and (min-width:$large_tablet) {
 
 		&--home:not(.header--fixed) {
@@ -76,7 +83,6 @@
 
 	&__logo {
 		font-size: 7rem;
-		transition:  font-size 1s;
 		letter-spacing: -0.03em;
 		color: $white2;
 		font-weight: 500;
@@ -151,7 +157,6 @@
 		flex-shrink: 0;
 		border: 1px solid white;
 		border-radius: 10rem;
-		transition: all 0.5s;
 		@media screen and (min-width:$large_tablet) {
 			display: none;
 		}

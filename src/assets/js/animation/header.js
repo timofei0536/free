@@ -21,7 +21,6 @@ if (!window.its_desktop) {
     opacity: 1,
     y: '0px',
     duration: 1,
-    xPercent: 0,
     stagger: {
       each: 0.2
     },
@@ -34,6 +33,23 @@ if (!window.its_desktop) {
     },
     delay: delay,
   })
+
+
+if ( document.querySelector('.main-screen__video')){
+
+  gsap.fromTo('.main-screen__video', 
+{
+  opacity: 0,
+  filter: 'blur(25px)',
+},
+  {
+    opacity: 1,
+    duration: 1,
+    filter: 'blur(0px)',
+    delay: delay + 1,
+  })
+
+}
 
 
 if ( window.its_desktop ){
