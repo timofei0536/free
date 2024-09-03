@@ -149,6 +149,68 @@
 				}
 
 			}
+
+			&.letter-h .pain__number-shadow {
+				width: 92%;
+				left: 7%;
+
+				&::before {
+					top: -0.1em;
+					height: calc( 100% + 0.1em );
+					clip-path: none;
+				}
+
+			}
+
+			&.letter-e .pain__number-shadow {
+				width: 92%;
+				left: 8%;
+
+				&::before {
+					top: 0.25em;
+					height: calc( 100% - 0.25em );
+					clip-path: none;
+				}
+			}
+
+			&.letter-d .pain__number-shadow {
+				width: 92%;
+				left: 8%;
+
+				&::before {
+					clip-path: polygon(68% 8%, 100% 0, 100% 100%, 0 100%, 0 6%) !important;
+					top: 0.05em;
+					height: calc( 100% - 0.05em );
+					clip-path: none;
+				}
+			}
+
+			&.letter-c .pain__number-shadow {
+				width: 97%;
+				left: 5%;
+
+				&::before {
+					clip-path: polygon(0.15em 0.15em, 82.5% 0.15em, 82.5% 0, 100% 0, 100% 100%, 0 100%, 0 0, 0.15em 0) !important;
+					top: 0.05em;
+					height: calc( 100% - 0.05em );
+					clip-path: none;
+				}
+			}
+
+
+			&.letter-a .pain__number-shadow {
+				width: 97%;
+				left: 5%;
+
+				&::before {
+					clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 100%, 0 100%, 0 10%) !important;
+					top: 0.07em;
+					height: calc( 100% - 0.07em );
+					clip-path: none;
+				}
+			}
+
+
 		}
 	}
 
@@ -156,6 +218,7 @@
 
 		.pain--big & {
 			flex-grow: 1;
+			font-size: 5.75rem;
 		}
 
 		.pain--white & {
@@ -187,13 +250,6 @@
 
 
 		.anim-line-wrap{
-
-		&:last-child {
-		.pain--big & {
-			display: none;
-		}
-
-		}
 
 			&--color {
 			color: #151515;
