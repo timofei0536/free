@@ -63,7 +63,7 @@ window.closeMenu = function () {
   }
 
   $('.mobile-menu__nav-item').find('.toogles__item').removeClass('toogles__item--active');
-  $('.toogles__item-title--active').removeClass('toogles__item-title--active');
+  $('.mobile-menu .toogles__item-title--active').removeClass('toogles__item-title--active');
   menu.classList.remove('mobile-menu--active');
   viewMenuAnimation.reverse();
 }
