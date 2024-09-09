@@ -70,13 +70,12 @@ export const backgroundsGsap = () => {
   });
 
 
-    ReadTl.fromTo(document.querySelector(".pain__bg"),{
-      background: '#29292F',
-      height: '200vh',
+    ReadTl.fromTo(document.querySelector("body"),{
+      background: '#0E0D17',
     }, {
       background: '#FC1234',
-      height: '120vh',
     },0);
+
 
     ReadTl.fromTo(".pain .ticker, .pain__gradient",{
       opacity: 0,
@@ -100,13 +99,16 @@ export const backgroundsGsap = () => {
     },0);
 
     animTl.fromTo(".pain__number span",{
+      y: '15px',
       opacity: 0,
     }, {
+      y: 0,
       opacity: 1,
       stagger: {
         each: 0.05,
       }
     },0);
+
 
 
     animTl.fromTo(".pain__number-shadow",{
