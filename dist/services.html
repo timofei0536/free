@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
     <meta name="description" content="Text">
+    <style>
+      body {opacity: 0; scale: 0.9; animation: pageTransOn 0.5s forwards;}
+      @keyframes pageTransOn {from {opacity: 0; scale: 0.9;} to {opacity: 1; scale: 1;}}
+      .body--offpage {animation: pageTransOff 0.5s forwards;}
+      @keyframes pageTransOff {from {opacity: 1; scale: 1;} to {opacity: 0; scale: 0.9; filter: blur(10px);}}
+    </style>
     <title>Services</title>
     <meta name="theme-color" content="#302f38">
     <script>
@@ -26,7 +32,7 @@
     <link rel="icon" type="image/png" href="assets/images/png/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/png/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&amp;family=PT+Sans:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
-  <link href="assets/css/app.css?v=1725485365523" rel="stylesheet"></head>
+  <link href="assets/css/app.css?v=1725910760009" rel="stylesheet"></head>
   <body>
 <div class="preloader">
   <div class="preloader__content">
@@ -102,7 +108,7 @@
                   <div class="services__title at-element" data-at-name="atItemsColumnSelf" data-at-selector=".services__title span">
                     <div class="anim-line-wrap"><span class="anim-line">I’m Provide</span></div>
                     <div class="anim-line-wrap"><span class="anim-line">Cost Effective</span></div>
-                    <div class="anim-line-wrap"><span class="anim-line">High Standart</span></div>
+                    <div class="anim-line-wrap"><span class="anim-line">High Standard</span></div>
                     <div class="anim-line-wrap"><span class="anim-line">Development</span></div>
                   </div>
                   <div class="services__text at-element" data-at-name="atItemsColumnSelf" data-at-selector=".services__text span"><span> • Perfect Pixel</span><span> • Attention to Details</span><br><span> • Sense of Style</span><span> • No Headeach</span></div>
@@ -499,5 +505,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-  <script src="js/app.js?v=1725485365465"></script></body>
+  <script src="js/app.js?v=1725910759932"></script></body>
 </html>
