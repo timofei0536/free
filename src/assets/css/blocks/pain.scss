@@ -1,7 +1,7 @@
 .pain {
 	padding-top: 10rem;
 	position: relative;
-
+/*
 	&__gradient {
 		content: "";
 		position: absolute;
@@ -12,11 +12,12 @@
 		background-image: url('~img/png/bg-6.png');
 		background-size: cover;
 		z-index: 2;
+		opacity: 0.1;
 		.pain--big & {
 			display: none;
 		}
 	}
-
+*/
 
 	&--big {
 		padding-bottom: 20rem;
@@ -63,6 +64,7 @@
 		line-height: 0.75;
 		letter-spacing: -0.05em;
 		color: #151515;
+		color: $red;
 		z-index: -1;
     	@media screen and (max-width:$large_tablet) {
     		font-size: 7.55rem;
@@ -112,7 +114,7 @@
 					height: 100%;
 					top: 0px;
 					background: rgba(black,0.1);
-					background: linear-gradient(360deg, rgba(black, 0) -0.39%, rgba(black, 0.15) 85.24%);
+					background: linear-gradient(360deg, rgba(black, 0.4) -0.39%, rgba($red, 0.15) 85.24%);
 
     				@media screen and (max-width:$large_tablet) {
 
@@ -250,15 +252,10 @@
 
 
 		.anim-line-wrap{
-
 			&--color {
-			color: #000;
-
-		.pain--white & {
 			color: $red;
+			}
 		}
-		}
-	}
 
 
 

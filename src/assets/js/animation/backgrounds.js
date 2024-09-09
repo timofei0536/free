@@ -69,24 +69,6 @@ export const backgroundsGsap = () => {
 
   });
 
-
-    ReadTl.fromTo(document.querySelector("body"),{
-      background: '#0b0a17',
-    }, {
-      background: '#FC1234',
-    },0);
-
-
-    ReadTl.fromTo(".pain .ticker, .pain__gradient",{
-      opacity: 0,
-    }, {
-      opacity: 1,
-    },0);
-
-    // проблема -> сразу начинается красный появляться, а в это время серый еще не красный. потому видны различия.
-    // нужно -> красный появился и тогда появляется градиент;
-
-
     animTl.fromTo(".pain .anim-line-wrap",{
       x: "30px",
       opacity: 0,
