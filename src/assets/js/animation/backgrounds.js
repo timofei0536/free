@@ -71,7 +71,7 @@ export const backgroundsGsap = () => {
 
 
     ReadTl.fromTo(document.querySelector("body"),{
-      background: '#0E0D17',
+      background: '#0b0a17',
     }, {
       background: '#FC1234',
     },0);
