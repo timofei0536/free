@@ -1,10 +1,3 @@
-// function checkAnchor() {
-//   var elementid = window.location.hash.replace("#anchor", "");
-//   if (elementid) {
-//     scrollToElement(elementid, true);
-//   }
-// }
-
 function checkAnchor() {
   if (window.location.hash) {
     const hash = window.location.hash;
@@ -51,7 +44,7 @@ $('.anchors a:not([data-anchors]), .single-anchors').on("click", function (e) {
   if (elementid.search('#') == -1) { //element та текущей странице
     scrollToElement(elementid);
 
-  } else { //element может бытьна другой странице
+  } else { //element может быть на другой странице
 
     var elementHref = elementid.substring(0, elementid.indexOf('#'));
     var elementid = elementid.substr(elementid.indexOf("#") + 1);
@@ -62,9 +55,7 @@ $('.anchors a:not([data-anchors]), .single-anchors').on("click", function (e) {
 
     } else { //element на другой странице
 
-      setTimeout(function () {
-        location.href = elementHref;
-      }, 250);
+      window.offpage(elementHref);
 
     }
   }
