@@ -140,7 +140,7 @@
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			gap: 10rem;
+			gap: 5rem;
 		}
 
 		&-left {
@@ -187,6 +187,12 @@
 			gap: 2rem;
 			width: 100%;
 			max-width: 37rem;
+
+			.btn {
+				.portfolio__item--white & {
+					border-color: rgba(black,0.15);
+				}
+			}
 		}
 
 		&-designer {
@@ -211,6 +217,7 @@
 			background-clip: text;
 			text-fill-color: transparent;
 				}
+
 		}
 
 		&-tags {

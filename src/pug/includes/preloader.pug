@@ -15,8 +15,7 @@
 script.
 	let preloader = document.querySelector('.preloader');
 
-	if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("frontend") == -1) || !(location.href.indexOf('localhost') == -1)) {
+	if ( !(document.referrer.indexOf("frontend") == -1) || !(location.href.indexOf('localhost') == -1)) {
 		preloader.remove();
+		document.querySelector('body').classList.remove('body--firstpage');
 	}
-
-	// document.cookie = "cookie=hide;max-age=86400";

@@ -4,7 +4,7 @@ import './assets/js/consts';
 import './assets/css/animation/preloader.scss'
 import './assets/css/animation/main.scss'
 import './assets/css/animation/cursor.scss'
-// import './assets/js/animation/page-trans.js'
+import './assets/js/animation/page-trans.js'
 
 
 
