@@ -9,8 +9,9 @@ import { mainScreen } from './main-screen';
 import { imgLoad } from '../img-load';
 
 function addScrollTrigger() {
-  window.pageOn();
-
+  if ( !document.querySelector('.body--firstpage')) {
+    window.pageOn();
+  }
   atBlock();
   mainScreen();
   backgroundsGsap();
