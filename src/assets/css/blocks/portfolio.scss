@@ -58,11 +58,45 @@
 		height: calc( 100vh );
 		position: relative;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
 		margin-bottom: -5rem;
 		overflow: hidden;
-		border-radius: 2rem 2rem 0px 0px;
+		border-radius: 2rem;
+		padding: 5rem;
+		background: $bg--black;
+
+		&--white {
+			color: black;
+		}
+
+
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		height: 100%;
+		background-image: url('~img/svg/gradient--work1.svg');
+		background-size: cover;
+		z-index: 2;
+	}
+
+		&--work2::before {
+			background-image: url('~img/svg/gradient--work2.svg');
+			background-size: cover;
+		}
+
+		&--work3{
+			background: white;
+			&::before {
+			background-image: url('~img/svg/gradient--work3.svg');
+			background-size: cover;
+			}
+		}
+
 		@media screen and (max-width: $large_tablet) {
 			border-radius: 0.5rem 0.5rem 0px 0px;
 			
@@ -76,88 +110,127 @@
 			height: 100%;
 			object-fit: cover;
 		}
-		
 
-		&-content {
-			z-index: 2;
-
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			position: absolute;
-			right: 5rem;
-			bottom: 5rem;
-			background: linear-gradient(107.37deg, rgba(black, 0.7) 39.54%, rgba(blue, 0.4) 99.91%);
-			backdrop-filter: blur(10px);
-			border-radius: 1rem;
-			padding: 5rem;
-
-			@media screen and (max-width: $large_tablet) {
-				gap: 1.5rem;
-				right: -1px;
-				bottom: -1px;
-				padding: 2.5rem 2rem;
-				border-radius: inherit;
-				width: calc( 100% + 2px );
-			}
-
-		}
-
-		.btn {
-
-		}
 
 		&-title {
-			font-size: 6rem;
+			font-size: 10rem;
 			font-weight: 500;
 			text-transform: uppercase;
-			@media screen and (max-width: $large_tablet) {
-				font-size: 2.5rem;
-				margin-bottom: 0.5rem;
-			}
+			z-index: 2;
+			margin-right: auto;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 30%, #FFFFFF 75%, rgba(255, 255, 255, 0.4) 90%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			-webkit-text-fill-color: transparent;
 
+			.portfolio__item--white & {
+				background-clip: initial;
+				-webkit-background-clip: initial;
+				-webkit-text-fill-color: initial;
+				color: #333 !important;
+				background: none !important;
+			}
 		}
 
-		&-middle {
+
+		&-wrap {
+			z-index: 2;
+			margin: auto 0px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			gap: 10rem;
+		}
+
+		&-left {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			width: 100%;
-			@media screen and (max-width: $large_tablet) {
-				gap: 2rem;
-			}
-
+			max-width: 37rem;
 		}
 
-		&-text {
-			font-size: 2.4rem;
-			line-height: 120%;
-			font-weight: 300;
-			margin-top: 1rem;
+		&-date {
+			font-size: 1.8rem;
+			color: rgba(white,0.5);
+				.portfolio__item--white & {
+					color: #d9d9d9;
+				}
+		}
 
-			@media screen and (max-width: $large_tablet) {
-				font-size: 1.4rem;
+		&-video {
+			width: 100%;
+			max-width: 90rem;
+			border-radius: 1rem;
+			overflow: hidden;
+			position: relative;
+			> div {
+				padding-bottom: calc( 500 / 900 * 100% );
 			}
+		}
 
+		&-img, &-img img {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&-right {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-end;
+			gap: 2rem;
+			width: 100%;
+			max-width: 37rem;
+		}
+
+		&-designer {
+			text-align: right;
+			font-size: 3rem;
+			line-height: 110%;
+			text-transform: uppercase;
+			letter-spacing: -0.03em;
+			font-family: $primary-f2;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 30%, #FFFFFF 75%, rgba(255, 255, 255, 0.4) 90%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+				.portfolio__item--white & {
+					background: linear-gradient(90deg, #C7C1C1 0%, #000000 33%, #000000 61%, #C7C1C1 90%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+				}
 		}
 
 		&-tags {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 1rem;
-			margin-top: 4rem;
-			margin-bottom: 3rem;
 			@media screen and (max-width: $large_tablet) {
 				font-size: 1.4rem;
 			}
 
 			span {
 				display: inline-block;
-				font-size: 1.8rem;
-				line-height: 140%;
-				font-weight: 500;
-				padding: 0.2em 0.4em;
+				font-size: 2rem;
+				line-height: 120%;
+				padding: 0rem 0.3em;
 				border: 1px solid rgba(white,0.2);
-				border-radius: 50px;
+				border-radius: 5rem;
+				.portfolio__item--white & {
+					border: 1px solid rgba(black,0.2);
+				}
 			}
 		}
 	}
