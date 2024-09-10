@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
     <meta name="description" content="Text">
+    <style>body:not(.body--firstpage) {opacity: 0;}</style>
     <title>Privacy Policy</title>
     <meta name="theme-color" content="#302f38">
     <script>
@@ -26,8 +27,8 @@
     <link rel="icon" type="image/png" href="assets/images/png/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/png/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&amp;family=PT+Sans:wght@400;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
-  <link href="assets/css/app.css?v=1725973348876" rel="stylesheet"></head>
-  <body>
+  <link href="assets/css/app.css?v=1725989029188" rel="stylesheet"></head>
+  <body class="body--firstpage">
 <div class="preloader">
   <div class="preloader__content">
     <div class="preloader__title">
@@ -38,11 +39,10 @@
 <script>
   let preloader = document.querySelector('.preloader');
   
-  if ( document.cookie.includes("cookie=hide") || !(document.referrer.indexOf("frontend") == -1) || !(location.href.indexOf('localhost') == -1)) {
+  if ( !(document.referrer.indexOf("frontend") == -1) || !(location.href.indexOf('localhost') == -1)) {
   	preloader.remove();
+  	document.querySelector('body').classList.remove('body--firstpage');
   }
-  
-  // document.cookie = "cookie=hide;max-age=86400";
 </script>
     <div class="cursor">
       <div class="cursor__video">Play</div>
@@ -171,5 +171,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-  <script src="js/app.js?v=1725973348812"></script></body>
+  <script src="js/app.js?v=1725989029128"></script></body>
 </html>
