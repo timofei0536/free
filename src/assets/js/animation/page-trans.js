@@ -32,6 +32,9 @@ $(document).ready(function () {
         opacity: 1,
         scale: 1,
         duration: 1,
+        onComplete:function(){
+          ScrollTrigger.refresh();
+        }
     });
 
   }

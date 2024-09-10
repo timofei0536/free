@@ -12,6 +12,7 @@ function addScrollTrigger() {
   if ( !document.querySelector('.body--firstpage')) {
     window.pageOn();
   }
+
   atBlock();
   mainScreen();
   backgroundsGsap();
