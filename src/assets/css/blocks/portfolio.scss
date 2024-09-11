@@ -87,6 +87,11 @@
 		z-index: 2;
 	}
 
+		&--work1::before {
+			background-color: black;
+		}
+
+
 		&--work2::before {
 			background: conic-gradient(from 181.8deg at 48.49% 42.13%, #000000 -36deg, #5840FA 47.96deg, #000000 75.22deg, #281D73 136.85deg, #5840FA 171.37deg, #3C2CAB 180deg, #000000 324deg, #5840FA 407.96deg);
 			background-size: cover;
