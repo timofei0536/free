@@ -9,34 +9,19 @@ import { mainScreen } from './main-screen';
 import { imgLoad } from '../img-load';
 
 function addScrollTrigger() {
+
   if ( !document.querySelector('.body--firstpage')) {
     window.pageOn();
   }
-
-  atBlock();
-  mainScreen();
-  backgroundsGsap();
-  portfolio();
-  // parallaxImg();
-  // videoPreload();
-  // imgLoad();
-}
-function addScrollTriggerMobilel() {
   atBlock();
   mainScreen();
   backgroundsGsap();
   portfolio();
 }
 
-if (window.its_desktop) {
   document.addEventListener('DOMContentLoaded', function () {
     window.addLoadEvent(addScrollTrigger);
   });
-} else {
-  document.addEventListener('DOMContentLoaded', function () {
-    window.addLoadEvent(addScrollTriggerMobilel);
-  });
-}
 
 let isScrollbarInitialized = false;
 function initializeScrollbar() {
