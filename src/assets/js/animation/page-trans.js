@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(document).on(
     'click',
-    "a:not([href^='#']):not([href^='tel']):not([href^='mailto']):not(.anchors a):not(.single-anchors):not([data-anchors]):not(.fancybox):not([target='_blank']):not([data-fancybox]):not([download])",
+    "a:not([href^='#']):not([href^='tel']):not([href^='mailto']):not(.anchors a):not(.single-anchors):not([data-anchors]):not(.fancybox):not([target='_blank']):not([data-fancybox]):not([download]), .anchors a[data-anchors='false']",
     function (e) {
       e.preventDefault();
       href = $(this).attr('href');
