@@ -2,6 +2,9 @@
 	position: relative;
 	z-index: 2;
 	margin: 40rem 0px;
+		@media screen and (max-width: $large_tablet) {
+			display: none;
+		}
 
     &__bg {
         position: absolute;
