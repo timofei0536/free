@@ -54,7 +54,3 @@ import './assets/js/zoom-body';
 import './assets/js/animation/change';
 
 
- // document.querySelector('video').playbackRate = 0.5;
-
-
-
