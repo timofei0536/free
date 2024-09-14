@@ -49,7 +49,7 @@
 		color: $red;
 		z-index: -1;
     	@media screen and (max-width:$large_tablet) {
-    		font-size: 7.55rem;
+    		font-size: 7.35rem !important;
     	}
 
 
@@ -219,9 +219,10 @@
 		white-space: nowrap;
 
     	@media screen and (max-width:$large_tablet) {
-    		font-size: 3.6rem;
+    		font-size: 3.1rem !important;
     		position: relative;
     		z-index: 2;
+
     	}
 
 		.pain--big & {

@@ -34,6 +34,13 @@ $(document).ready(function () {
         duration: 1,
         onComplete:function(){
           ScrollTrigger.refresh();
+          if ( document.querySelector('.main-screen__gradient')) {
+
+            gsap.to('.main-screen__gradient',{
+              opacity: 1,
+              duration: 5,
+            });
+          }
         }
     });
 

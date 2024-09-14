@@ -13,58 +13,6 @@ let portfolioIntro = document.querySelector('.portfolio__intro');
 
 let tlPinDuration = 3000;
 
-  let soundTLOn = gsap.timeline({
-    scrollTrigger: {
-      trigger: portfolio,
-      start: "center bottom",
-      end: '+='+tlPinDuration/2 +'px',
-      scrub: true,
-    }
-  });
-
-
-
-  soundTLOn.to(portfolio,{
-    opacity:1,
-
-            onReverseComplete: function(){
-              if(window.player2){
-                  try {
-                    window.player2.mute()
-                  } catch (error) {
-                      // console.error("Произошла ошибка при попытке воспроизвести видео:", error);
-                  }
-              }
-            },
-            
-        onStart: () => {
-          if ( window.enableSound ) {
-            if(window.player2){
-                  try {
-                    window.player2.unMute()
-                  } catch (error) {
-                      // console.error("Произошла ошибка при попытке воспроизвести видео:", error);
-                  }
-            }
-          }
-        },
-            onUpdate: function() {
-                let  progress = soundTLOn.progress();
-                if(window.player2){
-                  try {
-                    window.player2.setVolume(progress*100/4);
-                  } catch (error) {
-                      // console.error("Произошла ошибка при попытке воспроизвести видео:", error);
-                  }
-
-
-                }
-             },
-  })
-
-
-
-
 
 
   let tlPin = gsap.timeline({
@@ -88,11 +36,6 @@ let tlPinDuration = 3000;
     duration: 1,
   },0)
 
-
-  //   tlPin.to(portfolio.querySelectorAll('.portfolio__intro-item:not(.portfolio__intro-item--center)'),{
-  //   opacity: 0.5,
-  //   duration: 1,
-  // },0)
 
 
 function calculateProportions(x, y) {
@@ -119,29 +62,6 @@ function calculateProportions(x, y) {
      scale: 0.7,
      opacity: 0,
      duration: duration1,
-      onUpdate: function() { 
-
-          let  progress = tlPin.progress();  
-
-          let range1  = 0.5;
-
-          let range2 = range1 + ( range1*duration1);
-
-          const scaledProgress = (progress - range1) / (range2 - range1);
-
-
-          const clampedProgress = Math.max(0, Math.min(1, scaledProgress));
-
-          if(window.player2){
-                  try {
-                    window.player2.setVolume((1-clampedProgress)*100/4);
-                  } catch (error) {
-                      // console.error("Произошла ошибка при попытке воспроизвести видео:", error);
-                  }
-          }
-
-      },
-
         onReverseComplete: function(){
               document.querySelector('.portfolio__title').style.opacity = 1;
         },
@@ -170,6 +90,34 @@ function calculateProportions(x, y) {
 
 
 }
+
+
+$(document).ready(function() {
+  $("#open-video").on('click', function() {
+
+    gsap.to('.portfolio__intro-item-video',{
+      opacity: 0.1,
+      duration: 0.5
+    });
+
+    $.fancybox.open({
+      src: 'https://www.youtube.com/embed/CxVrIwuzmIo?autoplay=1',
+      type: 'iframe',
+      opts: {
+        iframe: {
+          preload: false // Помогает предотвратить проблемы загрузки iframe
+        },
+                  afterClose: function() {
+
+                  gsap.to('.portfolio__intro-item-video',{
+                    opacity: 1,
+                    duration: 0.5
+                  }); 
+        }
+      }
+    });
+  });
+});
 
 
 

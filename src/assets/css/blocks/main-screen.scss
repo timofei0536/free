@@ -9,7 +9,7 @@
       position: relative;
     }
 
-  &::before {
+  &__gradient {
     content: "";
     position: absolute;
     left: 0px;
@@ -20,6 +20,8 @@
     background-size: 100% 100%;
     background-position: left bottom;
     z-index: -1;
+    opacity: 0;
+    display: none;
         @media screen and (max-width:$large_tablet) {
             display: none;
         }
@@ -124,9 +126,11 @@
         padding: 1rem;
         padding-left: 2rem;
       }
+        
         @media screen and (max-width:$large_tablet) {
             display: none;
         }
+
     	&-icon {
     		position: relative;
     		width: 9rem;
@@ -136,6 +140,9 @@
     		display: flex;
     		align-items: center;
     		justify-content: center;
+          img {
+            width: 90%;
+          }
     	}
     }
 }
