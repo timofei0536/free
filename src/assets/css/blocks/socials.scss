@@ -12,8 +12,8 @@
         height: 8.8rem;
         width: 8.8rem;
         @media screen and (max-width:$large_tablet) {
-            width: 7rem;
-            height: 7rem;
+            width: 6rem;
+            height: 6rem;
         }
 
         transition: 0.5s;
@@ -22,7 +22,7 @@
         svg {
             width: 3.8rem;
             @media screen and (max-width:$large_tablet) {
-                width: 2.7rem;
+                width: 2.4rem;
             }
 
 
