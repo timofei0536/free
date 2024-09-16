@@ -7,37 +7,27 @@ mixin form(params)
 						div
 							.form__title Just leave a link,<br> and I’ll send you an Estimate for Compare
 							form.form__inputs
-								input(type='hidden' name='subject' title='Free Consultation')
+								input(type='hidden' name='subject' value='Compare Estimate')
 								.form__input-wrap
 									input.form__input(required type='email' name='email' placeholder='Your E-mail')
 								.form__input-wrap
 									input.form__input(required type='text' name='name' placeholder='Your Name')
 								.form__input-wrap
-									input.form__input(required type='text' name='site' placeholder='Your Last Figma Link')
-								if params.formid == true
-									input(type='submit' style='display:none;' id='form2_1')
-									label(for='form2_1')
-										+btn({class:'btn--fill',text:"GET ESTIMATE"})
-								else 
-									input(type='submit' style='display:none;' id='form1')
-									label(for='form1')
-										+btn({class:'btn--fill',text:"GET ESTIMATE"})
+									input.form__input(required type='text' name='figma' placeholder='Your Last Figma Link')
+								input(type='submit' style='display:none;' id='form1')
+								label(for='form1')
+									+btn({class:'btn--fill',text:"GET ESTIMATE"})
 								.form__bottom Only 2 free estimates are available due to my limited availability this week)
 		.toogles__item(data-toogles='2')
 					.toogles__item-content
 						div
 							.form__title You will Get<br> Prices right Now<br> on your email
 							form.form__inputs
-								input(type='hidden' name='subject' title='Free Start')
+								input(type='hidden' name='subject' value='Prices Right Now')
 								.form__input-wrap
 									input.form__input(required type='email' name='email' placeholder='Your E-mail')
 								.form__input-wrap
 									input.form__input(required type='text' name='name' placeholder='Your Name')
-								if params.formid == true
-									input(type='submit' style='display:none;' id='form2_2')
-									label(for='form2_2')
-										+btn({class:'btn--fill',text:"GET PRICES"})
-								else
-									input(type='submit' style='display:none;' id='form2')
-									label(for='form2')
-										+btn({class:'btn--fill',text:"GET PRICES"})
+								input(type='submit' style='display:none;' id='form2')
+								label(for='form2')
+									+btn({class:'btn--fill',text:"GET PRICES"})

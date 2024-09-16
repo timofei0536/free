@@ -51,6 +51,7 @@ import './assets/js/anchors';
 import './assets/js/theme-color';
 import './assets/js/iphoneScroll';
 import './assets/js/zoom-body';
+import './assets/js/form';
 import './assets/js/animation/change';
 
 
