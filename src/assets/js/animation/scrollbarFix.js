@@ -15,8 +15,8 @@ function addScrollTrigger() {
   }
   atBlock();
   mainScreen();
-  backgroundsGsap();
   portfolio();
+  backgroundsGsap();
 }
 
   document.addEventListener('DOMContentLoaded', function () {

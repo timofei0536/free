@@ -105,7 +105,7 @@
 	}
 
 	&__title {
-		font-size: 8rem;
+		font-size: 6.5rem;
 		line-height: 1;
 		font-family: $primary-f2;
 		margin: 3rem 0px;
@@ -118,7 +118,7 @@
 
 		[data-toogles='2'] & {
 			@media screen and (min-width:$large_tablet) {
-				font-size: 7.25rem;
+				font-size: 5.75rem;
 			}
 		}
 	}

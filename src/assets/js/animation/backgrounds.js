@@ -1,10 +1,12 @@
 export const backgroundsGsap = () => {
 
-  let delay = window.PRELOADER_DELAY  + 2000;
+  let delay = window.PRELOADER_DELAY;
 
 
-
+setTimeout(function(){
+  
   if (document.querySelector('.pain--big') && document.querySelector('.cta')) {
+
 
     gsap.to(".cta__bg", {
 
@@ -24,7 +26,7 @@ export const backgroundsGsap = () => {
   }
 
   
-  setTimeout(function(){
+
 
   if (document.querySelector('.mission') && document.querySelector('.portfolio__bg')) {
 
@@ -107,40 +109,6 @@ export const backgroundsGsap = () => {
 
   }
 
-
-
-
-if (window.its_desktop) {
-
-  // processes
-
-  gsap.to(document.querySelectorAll(".processes"), {
-
-    scrollTrigger: {
-      trigger: '.processes',
-      start: "bottom center+=200px",
-      end: "+=1000px",
-      scrub: 1.5,
-      pin: '.processes',
-      pinSpacing: false,
-    },
-
-  });
-
-
-  gsap.to(document.querySelectorAll(".processes > *"), {
-
-    scrollTrigger: {
-      trigger: '.processes',
-      start: "bottom center+=200px",
-      end: "+=200px",
-      scrub: 1.5,
-    },
-
-    opacity: 0,
-  });
-
-}
 
 
 },delay);

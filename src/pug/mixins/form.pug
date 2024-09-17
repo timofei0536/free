@@ -2,8 +2,8 @@ mixin form(params)
 	.form(class=params.class).toogles.toogles--fade
 		svg(width='206' height='27' viewbox='0 0 206 27' fill='none' xmlns='http://www.w3.org/2000/svg' class='form__arrow')
 			path(d='M5.08001 11.906L5.49083 10.4633L5.08001 11.906ZM201.298 8.89779L201.753 10.3272L201.753 10.3272L201.298 8.89779ZM205.451 8.68926C205.832 7.95343 205.544 7.0484 204.808 6.66782L192.817 0.46599C192.081 0.0854149 191.176 0.37341 190.795 1.10925C190.415 1.84508 190.703 2.75011 191.438 3.13069L202.097 8.64343L196.584 19.3022C196.204 20.038 196.492 20.9431 197.228 21.3237C197.964 21.7042 198.869 21.4162 199.249 20.6804L205.451 8.68926ZM0.589182 12.1868L4.6692 13.3486L5.49083 10.4633L1.41082 9.30149L0.589182 12.1868ZM201.753 10.3272L204.573 9.42955L203.664 6.5708L200.843 7.46842L201.753 10.3272ZM4.6692 13.3486C69.2327 31.7342 137.783 30.6833 201.753 10.3272L200.843 7.46842C137.435 27.6457 69.4872 28.6874 5.49083 10.4633L4.6692 13.3486Z' fill='#C8FF54')
-		.toogles__item.toogles__item--active(data-toogles='1')
-					.toogles__item-content(style='display: block;')
+		.toogles__item(data-toogles='1')
+					.toogles__item-content
 						div
 							.form__title Just leave a link,<br> and I’ll send you an Estimate for Compare
 							form.form__inputs
@@ -18,8 +18,8 @@ mixin form(params)
 								label(for='form1')
 									+btn({class:'btn--fill',text:"GET ESTIMATE"})
 								.form__bottom Only 2 free estimates are available due to my limited availability this week)
-		.toogles__item(data-toogles='2')
-					.toogles__item-content
+		.toogles__item.toogles__item--active(data-toogles='2')
+					.toogles__item-content(style='display: block;')
 						div
 							.form__title You will Get<br> Prices right Now<br> on your email
 							form.form__inputs

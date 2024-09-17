@@ -122,9 +122,7 @@ $(document).ready(function() {
 
 
 
-
-
-    let items = document.querySelectorAll('.portfolio__item');
+let items = document.querySelectorAll('.portfolio__item');
 
 
 items.forEach((item, index, array) => {
@@ -191,10 +189,28 @@ tl.to(item, {
 });
 
 
-
-
-
     });
+
+
+
+  const hidePortfolio = gsap.timeline({
+    scrollTrigger: {
+          trigger: '.pain',
+          start: "top bottom", 
+          end: '+=1000px',
+          pin: '.portfolio__list',
+          scrub: 1,
+          pinSpacing: false,
+    }
+  });
+
+hidePortfolio.to('.portfolio__list', {
+  opacity: 0,
+  duration: 0.5,
+});
+
+
+
 
 }
 
