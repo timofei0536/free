@@ -7,6 +7,7 @@ $(document).delegate('form', 'submit', function(event) {
 		data: data,
 		success: function(result) {
 			// show_popup('thank-you');
+			fbq('track', 'FormSended');
 			alert('Hi I will contact you soon!)');
 		}
 	});

@@ -1,9 +1,10 @@
 extends ../layout/main
-
 block variables
     - var title = 'Services';
     - var homepage = true;
 block content
+    script.
+     fbq('track', 'ServicesPageView');
     include ../includes/services
     include ../includes/cta
 block footer
