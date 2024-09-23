@@ -53,5 +53,5 @@ import './assets/js/iphoneScroll';
 import './assets/js/zoom-body';
 import './assets/js/form';
 import './assets/js/animation/change';
-
+import './assets/js/select';
 

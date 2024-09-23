@@ -1,14 +1,14 @@
 $(document).delegate('form', 'submit', function(event) {
 	event.preventDefault();
-	let data = $(this).serialize();
+	let lang = navigator.language;
+	let data = $(this).serialize() + '&lang=' + encodeURIComponent(lang);
 	$.ajax({
 		type: "POST",
 		url: '/send.php',
 		data: data,
 		success: function(result) {
-			// show_popup('thank-you');
-			fbq('track', 'FormSended');
-			alert('Hi I will contact you soon!)');
+			fbq('trackCustom', 'FormSended');
+			alert('Hi, I will contact you soon!)');
 		}
 	});
 });

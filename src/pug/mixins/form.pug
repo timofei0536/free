@@ -14,6 +14,20 @@ mixin form(params)
 									input.form__input(required type='text' name='name' placeholder='Your Name')
 								.form__input-wrap
 									input.form__input(required type='text' name='figma' placeholder='Your Last Figma Link')
+								.select
+									.select__value(data-default-value="Stack") 
+										p Stack
+									.select__variants.overflow-bl.select__variants--width
+										label.radio__label
+											input.radio__input(type='radio' name='stack' value='Wordpress')
+											span.radio__content
+												span.radio__content-dot
+											span.radio__text Wordpress
+										label.radio__label
+											input.radio__input(type='radio' name='stack' value='Webflow')
+											span.radio__content
+												span.radio__content-dot
+											span.radio__text Webflow
 								input(type='submit' style='display:none;' id='form1')
 								label(for='form1')
 									+btn({class:'btn--fill',text:"GET ESTIMATE"})
@@ -29,5 +43,19 @@ mixin form(params)
 								.form__input-wrap
 									input.form__input(required type='text' name='name' placeholder='Your Name')
 								input(type='submit' style='display:none;' id='form2')
+								.select
+									.select__value(data-default-value="Stack") 
+										p Stack
+									.select__variants.overflow-bl.select__variants--width
+										label.radio__label
+											input.radio__input(type='radio' name='stack' value='Wordpress')
+											span.radio__content
+												span.radio__content-dot
+											span.radio__text Wordpress
+										label.radio__label
+											input.radio__input(type='radio' name='stack' value='Webflow')
+											span.radio__content
+												span.radio__content-dot
+											span.radio__text Webflow
 								label(for='form2')
 									+btn({class:'btn--fill',text:"GET PRICES"})
