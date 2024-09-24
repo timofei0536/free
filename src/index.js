@@ -33,6 +33,7 @@ import './assets/css/blocks/footer.scss';
 import './assets/css/blocks/main-screen.scss';
 import './assets/css/blocks/select.scss';
 import './assets/css/blocks/overflow-bl.scss';
+import './assets/css/blocks/policy.scss';
 
 // JS
 import './assets/js/animation/scrollbarFix';

@@ -1,10 +1,20 @@
 .policy {
-    padding-top: 15.5rem;
-    padding-bottom: 10rem;
+    margin: 20rem 0px;
+
+    h1 {
+        font-size: 8rem;
+        @media screen and (max-width:$large_tablet) {
+            font-size: 4rem;
+        }
+
+    }
+
+    .center-wrap {
+        max-width: 100rem;
+    }
 
     @media screen and (max-width:$large_tablet) {
-        padding-top: 10rem;
-        padding-bottom: 3rem;
+        margin: 15rem 0px;
     }
 
     &__content {
