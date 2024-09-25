@@ -40,6 +40,7 @@ import './assets/js/animation/scrollbarFix';
 import './assets/js/animation/header';
 import './assets/js/animation/preloader';
 import './assets/js/animation/cursor';
+import './assets/js/anal';
 // import './assets/js/animation/parallax-img';
 import './assets/js/animation/parallax-magner';
 import './assets/js/scrollBody';
