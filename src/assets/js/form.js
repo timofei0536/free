@@ -12,6 +12,7 @@ fetch('https://ipapi.co/json/')
 
 $(document).delegate('form', 'submit', function(event) {
 	event.preventDefault();
+	window.updatePreviousPageDuration();
 	let lang = navigator.language;
 	let data = $(this).serialize() + '&lang=' + encodeURIComponent(lang) + '&country=' + encodeURIComponent(window.country) + '&path=' + encodeURIComponent(window.userPath);
 	$.ajax({

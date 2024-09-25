@@ -1,6 +1,6 @@
 (function() {
   // Функция для обновления времени на предыдущей странице
-  function updatePreviousPageDuration() {
+  window.updatePreviousPageDuration = function() {
     let visitedPages = JSON.parse(localStorage.getItem('visitedPages')) || [];
     if (visitedPages.length > 0) {
       let lastPageData = visitedPages[visitedPages.length - 1];
@@ -36,11 +36,14 @@
     let visitedPages = JSON.parse(localStorage.getItem('visitedPages')) || [];
 
     // Формируем путь пользователя в формате "/page (time sec) -> /nextpage (time sec)"
-    return visitedPages.map(page => `${page.page} (${page.duration} сек.)`).join(' -> ');
+    return visitedPages.map(page => {
+      let referrerText = page.referrer.includes('http') ? `с ${page.referrer}` : page.referrer;
+      return `${referrerText} на ${page.page} (${page.duration} сек.)`;
+    }).join(' -> ');
   }
 
   // Обновляем время на предыдущей странице при каждом переходе на новую страницу
-  updatePreviousPageDuration();
+  window.updatePreviousPageDuration();
 
   // Добавляем текущую страницу в список посещенных
   addCurrentPage();
@@ -50,7 +53,7 @@
 
   // Очищаем данные при выходе с сайта (если не нужно сохранять на долгий срок)
   window.addEventListener('beforeunload', function() {
-    updatePreviousPageDuration(); // Обновляем время на текущей странице перед закрытием
+    window.updatePreviousPageDuration(); // Обновляем время на текущей странице перед закрытием
   });
 
 })();
