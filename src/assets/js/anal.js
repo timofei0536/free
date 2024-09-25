@@ -19,11 +19,6 @@
     let currentPage = window.location.pathname;
     let referrer = document.referrer || 'Прямой вход'; // Получаем откуда пользователь пришел
 
-    // Если реферер содержит ваш собственный домен, не сохраняем его
-    if (referrer.includes('frontend-woman.com')) {
-      referrer = 'Прямой вход'; // Устанавливаем как прямой вход, если это ваш домен
-    }
-
     // Добавляем текущую страницу с начальным временем
     visitedPages.push({
       page: currentPage,
@@ -42,6 +37,9 @@
     let sessionGapThreshold = 30 * 60; // 30 минут, например, как порог для разрыва сеанса
     let previousEndTime = 0; // Для расчета разрыва времени между сеансами
 
+    // Обновляем время на текущей странице перед выводом
+    window.updatePreviousPageDuration();
+
     // Формируем путь пользователя в формате с разрывами сеансов
     return visitedPages.map((page, index) => {
       let referrerText = page.referrer.includes('http') ? `с ${page.referrer}` : page.referrer;
@@ -51,8 +49,9 @@
       if (index > 0) {
         let previousPage = visitedPages[index - 1];
         let timeBetweenSessions = Math.floor((page.enterTime - previousPage.enterTime - previousPage.duration * 1000) / 1000);
+
+        // Проверка на реальный разрыв сеанса (не по обычному переходу)
         if (timeBetweenSessions > sessionGapThreshold) {
-          // Добавляем разрыв сеанса, если интервал между страницами превышает порог
           result = `[Разрыв сеанса] ` + result;
         }
       }
