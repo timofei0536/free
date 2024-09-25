@@ -7,7 +7,7 @@
       if (lastPageData.enterTime) {
         // Вычисляем время нахождения на предыдущей странице
         lastPageData.duration += Math.floor((Date.now() - lastPageData.enterTime) / 1000);
-        lastPageData.enterTime = null; // Сбрасываем, чтобы не дублировать расчет
+        lastPageData.enterTime = Date.now(); // Сбрасываем enterTime на текущий момент для дальнейших обновлений
       }
     }
     localStorage.setItem('visitedPages', JSON.stringify(visitedPages)); // Обновляем localStorage
@@ -30,6 +30,11 @@
     // Сохраняем обновленные данные в localStorage
     localStorage.setItem('visitedPages', JSON.stringify(visitedPages));
   }
+
+  // Устанавливаем setInterval для обновления времени каждые 5 секунд
+  setInterval(function() {
+    window.updatePreviousPageDuration(); // Регулярно обновляем время
+  }, 5000);
 
   // Функция для получения пути пользователя с продолжительностью на каждой странице и разрывами сеансов
   function getUserPath() {
