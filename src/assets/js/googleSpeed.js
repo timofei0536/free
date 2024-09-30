@@ -8,10 +8,7 @@ window.onload = function() {
   		let worksVideos = document.querySelectorAll('.portfolio__item-video video source');
   		for (let i = 0; i < worksVideos.length; i++) {
   			worksVideos[i].src = worksVideos[i].getAttribute('data-src');
-<<<<<<< HEAD
         worksVideos[i].closest('video').load();
-=======
->>>>>>> origin/main
   		}
 	  }
 };
