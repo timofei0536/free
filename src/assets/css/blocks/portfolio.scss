@@ -128,20 +128,11 @@
 			text-transform: uppercase;
 			z-index: 2;
 			margin-right: auto;
-			background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 30%, #FFFFFF 75%, rgba(255, 255, 255, 0.4) 90%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			color: transparent;
-			-webkit-text-fill-color: transparent;
 			letter-spacing: -0.03em;
 			font-family: $primary-f2;
 
 			.portfolio__item--white & {
-				background-clip: initial;
-				-webkit-background-clip: initial;
-				-webkit-text-fill-color: initial;
-				color: #333 !important;
-				background: none !important;
+				color: #333;
 			}
 
 
@@ -186,6 +177,7 @@
 		&-date {
 			font-size: 1.8rem;
 			color: rgba(white,0.5);
+			display: none;
 			@media screen and (max-width: $large_tablet) {
 				display: none;
 			}
@@ -258,19 +250,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-			background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, #FFFFFF 30%, #FFFFFF 75%, rgba(255, 255, 255, 0.4) 90%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			text-fill-color: transparent;
-				.portfolio__item--white & {
-					background: linear-gradient(90deg, #C7C1C1 0%, #000000 33%, #000000 61%, #C7C1C1 90%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			text-fill-color: transparent;
-				}
-
 			@media screen and (max-width: $large_tablet) {
 				font-size: 1.6rem;
 				display: inline-block;

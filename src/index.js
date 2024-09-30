@@ -36,6 +36,7 @@ import './assets/css/blocks/overflow-bl.scss';
 import './assets/css/blocks/policy.scss';
 
 // JS
+import './assets/js/googleSpeed';
 import './assets/js/animation/scrollbarFix';
 import './assets/js/animation/header';
 import './assets/js/animation/preloader';

@@ -35,7 +35,7 @@ section.portfolio#portfolio.portfolio--home
 					.portfolio__intro-item.portfolio__intro-item--center.cursor-video#open-video
 						div
 							div.portfolio__intro-item-video
-								<iframe id="player2" width="600" height="400" src="https://www.youtube.com/embed/m1Hn8lUqVm4?autoplay=1&mute=1&loop=1&enablejsapi=1&controls=0&playlist=m1Hn8lUqVm4" title="Frontend-Woman Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								<iframe id="player2" width="600" height="400" data-src="https://www.youtube.com/embed/m1Hn8lUqVm4?autoplay=1&mute=1&loop=1&enablejsapi=1&controls=0&playlist=m1Hn8lUqVm4" title="Frontend-Woman Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					.portfolio__intro-item.img-parallaxx
 						div
 
@@ -91,8 +91,8 @@ section.portfolio#portfolio.portfolio--home
 
 					.portfolio__item-video
 						div
-							video(autoplay, loop, muted)
-								source(src='assets/images/video/work-video1.mp4', type='video/mp4')
+							video(autoplay, loop, muted, preload="none")
+								source(data-src='assets/images/video/work-video1.mp4', type='video/mp4')
 					.portfolio__item-right
 						.portfolio__item-designer.mobile--hide
 							span Designed by 
@@ -121,8 +121,8 @@ section.portfolio#portfolio.portfolio--home
 
 					.portfolio__item-video
 						div
-							video(autoplay, loop, muted)
-								source(src='assets/images/video/work-video2.mp4', type='video/mp4')
+							video(autoplay, loop, muted, preload="none")
+								source(data-src='assets/images/video/work-video2.mp4', type='video/mp4')
 					.portfolio__item-right
 						.portfolio__item-designer.mobile--hide
 							span Designed by 
@@ -151,8 +151,8 @@ section.portfolio#portfolio.portfolio--home
 
 					.portfolio__item-video
 						div
-							video(autoplay, loop, muted)
-								source(src='assets/images/video/work-video3.mp4', type='video/mp4')
+							video(autoplay, loop, muted, preload="none")
+								source(data-src='assets/images/video/work-video3.mp4', type='video/mp4')
 					.portfolio__item-right
 						.portfolio__item-designer.mobile--hide
 							span Designed by 
