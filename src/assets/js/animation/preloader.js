@@ -5,49 +5,25 @@ if (document.querySelector('.preloader')) {
 
   setTimeout(function(){
 
-    let titleLines = title.querySelectorAll('.anim-line:not(.anim-line--none)');
-    let titleLetters = title.querySelectorAll('.anim-line');
+    let titleLines = title.querySelectorAll('.anim-line');
 
 
-    gsap.to(titleLetters,{
-      stagger: {
-        amount: 0.9
-      },
-      duration: 0.1,
+    gsap.to(titleLines,{
+      filter: 'blur(0px)',
       opacity: 1,
-    },
-    );
-
-
-    gsap.to(titleLetters,{
       stagger: {
-        amount: 0.9
+        amount: 0.6
       },
-      transform: "none",
-      duration: 1,
+      duration: 0.8,
 
       onComplete: function(){
-        title.classList.add('at-element--finished');
 
-        gsap.to(titleLetters,{
+        gsap.to(titleLines,{
           stagger: {
             amount: 0.6
           },
-          delay: 3,
-          duration: 0.6,
-          y: "-80%",
-          transform: "translate(0%, -50%) translateZ(0px) rotateX(50deg)",
-        },
-        );
-
-
-
-        gsap.to(titleLetters,{
-          stagger: {
-            amount: 0.6
-          },
-          duration: 0.25,
-          delay: 3.2,
+          duration: 1,
+          delay: 1.2,
           opacity: 0,
 
           onComplete: function(){

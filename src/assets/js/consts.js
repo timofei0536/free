@@ -7,7 +7,7 @@ if (document.querySelector('body').clientWidth < window.LARGE_TABLET) {
 }
 
 if (document.querySelector('.preloader')) {
-	window.PRELOADER_DELAY = 8000;
+	window.PRELOADER_DELAY = 6000;
 } else {
 	window.PRELOADER_DELAY = 0;
 }
